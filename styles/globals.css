@@ -3,14 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --pink: #e75480;
+  --pink: #FFB6C1;
   --green: #90ee90;
 }
 .gradient-pink-green {
   background:
+    radial-gradient(at top left, 
+    var(--green),
+    transparent 10%),
     radial-gradient( at top left,
-      var(--pink), var(--green), 
-      transparent 84%),
+      var(--pink) 30%, var(--green), 
+      transparent 90%),
     radial-gradient(circle at bottom left,
       white, var(--pink), var(--green), 
       transparent 64%),
