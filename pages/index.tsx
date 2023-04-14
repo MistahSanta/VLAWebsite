@@ -5,7 +5,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jonathan Le Personal Webpage</title>
+        <title>VLA</title>
+        <link rel="icon" href="/favicon.svg" />
+        <meta
+          name="description"
+          content="Welcome to the Vietnamese Language Association at UTD. We teach Vietnamese!"
+        />
       </Head>
 
       <Welcome />
