@@ -4,7 +4,7 @@ export default function Welcome() {
     <>
       <div
         id="home"
-        className="flex flex-col gradient-pink-green min-h-screen min-w-full shadow-lg shadow-amber-300"
+        className="flex flex-col gradient-pink-green min-h-screen min-w-full"
       >
       <div className="gradient-white min-h-screen mt-1">
         <div className="flex flex-row mx-auto items-center max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl 2xl:max-w-6xl py-10 sm:py-20 md:pt-30 justify-center">
