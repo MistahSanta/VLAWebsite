@@ -1,0 +1,64 @@
+.Container {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    color: white;
+    /* background-image: url("./public/img/blackbg.jpg"); */
+    background-color: black;
+    background-size: cover;
+    scrollbar-width: none;
+    /* Remove scrollbar */
+   &::-webkit-scrollbar {
+   display: none;
+}
+}
+
+
+
+.Who-section {
+   height: 100vh;
+   scroll-snap-align: center;
+   display: flex;
+   justify-content: center;
+}
+.Home-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    scroll-snap-align: center;
+    
+
+ }
+
+ .Works-section {
+    height: 100vh;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+
+ }
+
+ .Contact-section {
+    height: 100vh;
+    scroll-snap-align: center;
+ }
+
+.greenBackground {
+   position: absolute;
+   bottom: 0;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 0;
+
+   aspect-ratio: 1/1;
+   height:98%;
+}
+
+.lotus-section {
+   z-index: 1;
+}
