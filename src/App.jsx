@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="Container">
       <Home />
-      <Who />
+      {/* <Who /> */}
       {/* <Works /> */}
       {/* <Contact /> */}
     </div>
