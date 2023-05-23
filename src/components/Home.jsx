@@ -74,25 +74,6 @@ const Button = styled.button`
   cursor: pointer;
   border: none;
 `;
-const Background = styled.div`
-  width: 400px;
-  height: 300px;
-  background-color: #90ee90;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  animation: animate 2s infinite ease alternate;
-
-  @keyframes animate {
-    to {
-      transform: translateY(20px);
-    }
-  }
-`;
 
 export const Home = () => {
   return (
@@ -110,28 +91,26 @@ export const Home = () => {
           <Button>Learn More</Button>
         </Left>
         <Right>
-          <Canvas className="lotus-section"  camera={{fov: 55, position:[3,3,3]}}>
+          <Canvas className="lotus-section"  camera={{fov: 55, position:[3,2,3]}}>
 
             <ambientLight color="#F81894" intensity={0.5} />
             <directionalLight position={[1, 2, 1]} intensity={0.5} />
 
-            <OrbitControls enableZoom={false} autoRotate  />
+            <OrbitControls enableZoom={false} autoRotate enablePan={false} />
             <Lotus/>
           </Canvas>
 
           <svg
             id="visual"
             className= "greenBackground"
-            viewBox="0 0 900 675"
-            width="900"
-            height="900"
-            
+            viewBox="0 0 900 675" 
             version="1.1"
           >
             <g transform="translate(577.0619756043899 328.23943162381295)">
               <path
                 d="M195.9 -392.2C223.2 -323.6 193.5 -209.1 179.4 -136C165.4 -63 167.1 -31.5 186.3 11.1C205.5 53.7 242.2 107.3 269.3 203C296.4 298.7 314 436.4 267.5 465.3C221 494.1 110.5 414.1 -1 415.8C-112.5 417.5 -225 501 -291.5 483.8C-358.1 466.5 -378.7 348.5 -418.6 251.1C-458.5 153.7 -517.7 76.8 -540.4 -13.1C-563.1 -103 -549.1 -206 -479.7 -252.3C-410.3 -298.7 -285.4 -288.3 -196.2 -321.2C-107 -354 -53.5 -430 15.4 -456.7C84.3 -483.4 168.7 -460.8 195.9 -392.2"
                 fill="#80ff80"
+                
               ></path>
             </g>
           </svg>
