@@ -3,12 +3,9 @@ import Navbar from "./Navbar";
 import "..//styles.css";
 import styled from "styled-components";
 import {
-  MeshDistortMaterial,
   OrbitControls,
-  PerspectiveCamera,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Sphere } from "@react-three/drei";
 import Lotus from "./Lotus";
 
 const Container = styled.div`
@@ -86,7 +83,7 @@ export const Home = () => {
             <Subtitle>- Vietnamese Language Association</Subtitle>
           </WhatWeDo>
           <Desc>
-            we aim to teach Vietnamese and have fun while doing it.
+            we aim to have fun learning Vietnamese.
           </Desc>
           <Button>Learn More</Button>
         </Left>

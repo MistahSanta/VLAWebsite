@@ -1,7 +1,8 @@
 import { Contact } from "./components/Contact";
-import { Home } from "./components/Home";
 import { Events } from "./components/Events";
-import { Works } from "./components/Works";
+import { Team } from "./components/Team";
+import { Home } from "./components/Home.jsx";
+
 import "./styles.css";
 
 function App() {
@@ -10,10 +11,17 @@ function App() {
     <div className="Container">
       <Home />
       <Events />
-      <Works />
+      <Team />
       <Contact />
     </div>
   )
 }
 
 export default App
+
+
+/*
+- Add on hover over lotus - share link to the 3d model 
+- Add event page 
+
+*/
