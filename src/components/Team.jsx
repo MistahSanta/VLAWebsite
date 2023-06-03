@@ -50,7 +50,7 @@ export const Team = () => {
 
   
   return (
-    <div className='Works-section'>
+    <div className='Works-section' id="team">
 
       <Container>
         <GridContainer>

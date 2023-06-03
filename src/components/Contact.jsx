@@ -80,7 +80,7 @@ export const Contact = () => {
         });
     }
   return (
-    <div className='Contact-section'>
+    <div className='Contact-section' id="contact">
       <Container>
         
         <Left>

@@ -94,11 +94,12 @@ const Button = styled.button`
 
 const Navbar = () => {
     const data = [
-        "Events",
-        "Team",
-        "About us",
-        "Contact",
+        {name:"Events", id: "#event"},
+        {name: "Team", id: "#team"},
+        {name: "About us", id: "#"},
+        {name: "Contact", id: "#contact"},
     ]
+
   return (
     <Section>
         <Container>
@@ -108,11 +109,11 @@ const Navbar = () => {
                
                 <List>
                     {data.map( (item) => (
-                        <ListItem key={item}>
-                            {item}
-                            
-                        </ListItem>
                         
+                        <ListItem key={item.name} >
+                            <a href={item.id} style={{ textDecoration: 'inherit', color: 'inherit'}}>{item.name}</a>
+                        </ListItem>
+                      
                     ))}
 
                 </List>

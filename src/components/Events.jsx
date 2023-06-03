@@ -8,7 +8,7 @@ import Social from "../assets/social.png";
 const Container = styled.div`
     height: 100vh;
     scroll-snap-align: center;
-    width: 80%;
+    width: 70%;
     position: relative;
     display: column;
     justify-content: space-between;
@@ -37,7 +37,7 @@ const Card = styled.div`
 const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 4vw;
+  gap: 3vw;
 `
 const Link = styled.button`
   background-color: #ff83e2;
@@ -94,7 +94,7 @@ export const Events = () => {
   ]
 
   return (
-    <div className='Events-section'>
+    <div className='Events-section' id="event">
       <Container>
         <Title>Events</Title>
         <CardContainer>  
