@@ -50,7 +50,7 @@ const ListItem = styled.li`
     position: absolute;
     left: 0;
     bottom: 0;
-    background: linear-gradient(to right, #80ff80, #ff83e2);
+    background: linear-gradient(to right, #80ff80, white, #ff83e2);
     width: 0%;
     height: 4px;
     opacity: 0;
