@@ -2,14 +2,16 @@ import React, { useState, useRef } from "react";
 import "..//styles.css";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
-
-
+import {BsInstagram} from 'react-icons/bs'
+import {BsDiscord} from "react-icons/bs"
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
+  display: grid;
   position: relative;
-  justify-content: space-between;
+  grid-template-rows: min-content 1;
+  grid-template-columns: repeat(2,minmax(0, 2fr));
+  
   gap: 50px;
   overflow: hidden;
   z-index: 10;
@@ -18,11 +20,11 @@ const Container = styled.div`
 
     z-index: -1;
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
     width: 100%;
     height: 90%;
-    clip-path: polygon(100% 0, 100% 100%, -50% 110%);
+    clip-path: polygon(-150% 150%, 100% 100%, 110% 1%);
     background: #80ff80;  /* fallback for old browsers */
     background: linear-gradient(to right, #80ff80 10%, #45e645 20%, #80ff80, #45e645 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(
@@ -69,20 +71,53 @@ const Button = styled.button`
 const Left = styled.div`
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: flex-end;
 `;
 const Right = styled.div`
   flex: 1;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
 `;
+const RightTop = styled.div`
+  flex: 1;
+  width: 100%;
+
+`;
+const RightBottom = styled.div`
+  flex: 2;
+  color: black;
+  width: 100%;
+`
+
 
 const FormContainer = styled.div`
   background-color: black;
   padding: 10%;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  
+  border: #ff83e2 solid 3px;
+  box-shadow: rgba(231, 232, 233, 0.12) 0px 2px 4px 0px, rgba(227, 229, 230, 0.32) 0px 2px 16px 0px;
+  border-radius: 5%;
   
   `;
+
+const Header = styled.h1`
+
+  width: inherit;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-self: center;
+  flex-direction: column;
+  font-size: 74px;
+`
+const SubHeader = styled.h2`
+  margin-top: 1%;
+  font-size: 30px;
+  color: lightgray;
+`
 
 export const Contact = () => {
   const ref = useRef();
@@ -111,11 +146,16 @@ export const Contact = () => {
   };
   return (
     <div className="Contact-section" id="contact">
+            
       <Container>
+        <Header>Contact us
+          {'\n'}
+          <SubHeader>We would be happy to answer any question you have about VLA</SubHeader>
+        </Header>
         <Left>
           <FormContainer>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contact Us</Title>
+            <Title>Email us !</Title>
             <Input placeholder="Name" name="name" />
             <Input placeholder="Email" name="email" />
             <TextArea placeholder="Your Message" name="message" rows={10} />
@@ -126,7 +166,14 @@ export const Contact = () => {
           </FormContainer>
         </Left>
         <Right>
+              <RightTop>
 
+              </RightTop>
+              <RightBottom>
+                  <div> Hello join us!</div>
+                  <BsInstagram />
+                  <BsDiscord />
+              </RightBottom>
         </Right>
       </Container>
 

@@ -62,7 +62,7 @@ const Desc = styled.div`
   font-size: 24px;
   color: lightgray;
 `;
-const Button = styled.button`
+const Button = styled.a`
   background-color: #ff83e2;
   color: white;
   font-weight: 500;
@@ -71,13 +71,15 @@ const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   border: none;
+  text-align: center;
+  text-decoration: none;
 `;
 
 export const Home = () => {
   return (
     <div className="Home-section">
       <Navbar />
-      <Container>
+      <Container id="home">
         <Left>
           <Title>Xin Chào!</Title>
           <WhatWeDo>
@@ -86,7 +88,7 @@ export const Home = () => {
           <Desc>
             we aim to have fun learning Vietnamese.
           </Desc>
-          <Button>Learn More</Button>
+          <Button href="#event">Learn More</Button>
         </Left>
         <Right>
           <Canvas className="lotus-section"  camera={{fov: 55, position:[3,2,3]}}>

@@ -2,7 +2,9 @@
    --pink: #ff83e2;
    --green: #80ff80;
 }
-
+input, textarea {
+   outline-color: var(--pink);
+}
 .Container {
     height: 100vh;
     scroll-snap-type: y mandatory;
@@ -109,7 +111,7 @@
 .wave-container {  
    height: 60vh;
    width: 100%;
-   background: linear-gradient(to bottom, #80ff80 25%, white);
+   background: linear-gradient(to bottom, #80ff80 75%, white 99%);
    position: absolute;
    top: 0;
    left: 0;

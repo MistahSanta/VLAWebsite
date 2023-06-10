@@ -61,12 +61,14 @@ const EventName = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   margin: 4% 2% 5%;
+  color: #ff83e2;
 `;
 const Desc = styled.div`
   font-size: 1.1rem;
   color: lightgray;
   margin: 0 2%;
   line-height: 1.5rem;
+  margin-bottom: 10%;
 `;
 const Image = styled.img`
   width: 100%;
@@ -142,11 +144,11 @@ export const Events = () => {
               <Image src={events.img} />
               <EventName>{events.name}</EventName>
               <Desc>{events.desc}</Desc>
-              <LearnMore>Learn More</LearnMore>
+              {/*<LearnMore>Learn More</LearnMore>*/}
             </Card>
           ))}
         </CardContainer>
-        <Link>Upcoming Events</Link>
+       {/* <Link>Upcoming Events</Link> */}
       </Container>
     </div>
   );

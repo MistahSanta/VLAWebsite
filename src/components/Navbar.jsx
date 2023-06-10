@@ -80,7 +80,7 @@ const Icons = styled.div`
     gap: 20px;
 `
 
-const Button = styled.button`
+const Button = styled.a`
     padding: 10px;
     width: 100px;
     background-color: #ff83e2;
@@ -88,6 +88,10 @@ const Button = styled.button`
     border-radius: 6px;
     cursor: pointer;
     border: none;
+    text-align: center;
+    text-decoration: none;
+    border: solid 1px black;
+
 `
 
 
@@ -96,7 +100,7 @@ const Navbar = () => {
     const data = [
         {name:"Events", id: "#event"},
         {name: "Team", id: "#team"},
-        {name: "About us", id: "#"},
+        {name: "About us", id: "#home"},
         {name: "Contact", id: "#contact"},
     ]
 
@@ -120,7 +124,7 @@ const Navbar = () => {
                 
             </Links>
             <Icons>
-                <Button>Join Now</Button>
+                <Button href="#contact">Join Now</Button>
                 
             </Icons>
 
