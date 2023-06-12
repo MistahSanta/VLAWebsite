@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from "styled-components";
 import logo from "..//assets/VLALogo.png"
-import { hover } from '@testing-library/user-event/dist/hover';
+import {BsInstagram} from 'react-icons/bs'
+import {BsDiscord} from "react-icons/bs"
+
 /* CSS with styled components */
 const Section = styled.div`
     display: flex;
@@ -78,8 +80,14 @@ const Icons = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
-`
 
+`
+const Socials = styled.a`
+    padding-top: 3%;
+    text-decoration: none;
+    color: inherit;
+
+`
 const Button = styled.a`
     padding: 10px;
     width: 100px;
@@ -102,6 +110,7 @@ const Navbar = () => {
         {name: "Team", id: "#team"},
         {name: "About us", id: "#home"},
         {name: "Contact", id: "#contact"},
+
     ]
 
   return (
@@ -124,6 +133,8 @@ const Navbar = () => {
                 
             </Links>
             <Icons>
+                <Socials target="_blank" href="https://discord.gg/Vmbh9U7ZYS" ><BsDiscord style={{width:"1.5rem", height:"1.5rem"}}/> </Socials>
+                <Socials target="_blank" href="https://www.instagram.com/vlautd/"><BsInstagram style={{width:"1.5rem", height:"1.5rem"}}/></Socials>
                 <Button href="#contact">Join Now</Button>
                 
             </Icons>

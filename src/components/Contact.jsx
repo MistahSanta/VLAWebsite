@@ -2,8 +2,8 @@ import React, { useState, useRef } from "react";
 import "..//styles.css";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
-import {BsInstagram} from 'react-icons/bs'
-import {BsDiscord} from "react-icons/bs"
+import {GiLotus} from "react-icons/gi"
+import Footer from "./Footer";
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -12,7 +12,7 @@ const Container = styled.div`
   grid-template-rows: min-content 1;
   grid-template-columns: repeat(2,minmax(0, 2fr));
   
-  gap: 50px;
+  gap: 40px;
   overflow: hidden;
   z-index: 10;
   &::before {
@@ -41,7 +41,7 @@ const Title = styled.h1`
   font-weight: 200;
 `;
 const Form = styled.form`
-  width: 500px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -91,12 +91,13 @@ const RightBottom = styled.div`
   flex: 2;
   color: black;
   width: 100%;
+  position: relative;
 `
 
 
 const FormContainer = styled.div`
   background-color: black;
-  padding: 10%;
+  padding: 5% 8% 5% 8%;
   border: #ff83e2 solid 3px;
   box-shadow: rgba(231, 232, 233, 0.12) 0px 2px 4px 0px, rgba(227, 229, 230, 0.32) 0px 2px 16px 0px;
   border-radius: 5%;
@@ -104,19 +105,32 @@ const FormContainer = styled.div`
   `;
 
 const Header = styled.h1`
-
+  margin-top: 1%;
   width: inherit;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 3;
   align-self: center;
   flex-direction: column;
-  font-size: 74px;
+  font-size: 3rem;
 `
 const SubHeader = styled.h2`
   margin-top: 1%;
-  font-size: 30px;
+  font-size: 1.5rem;
   color: lightgray;
+`
+
+const Join = styled.h1`
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1%;
+`
+const Platforms = styled.h2`
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+
 `
 
 export const Contact = () => {
@@ -144,21 +158,29 @@ export const Contact = () => {
         }
       );
   };
+
+  const data = [ 
+    "Show up to our next event",
+    "Follow us to get alert on upcoming events",
+    "Reach out to us :)",
+  ];
+
+
   return (
     <div className="Contact-section" id="contact">
             
       <Container>
         <Header>Contact us
           {'\n'}
-          <SubHeader>We would be happy to answer any question you have about VLA</SubHeader>
+          <SubHeader>We would be happy to answer any question you have about VLA or the Vietnamese Language</SubHeader>
         </Header>
         <Left>
           <FormContainer>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Email us !</Title>
-            <Input placeholder="Name" name="name" />
-            <Input placeholder="Email" name="email" />
-            <TextArea placeholder="Your Message" name="message" rows={10} />
+            <Input placeholder="Name" name="name" required/>
+            <Input placeholder="Email" name="email" required />
+            <TextArea placeholder="Your Message" name="message" rows={10} required />
             <Button type="submit">Send</Button>
             {success &&
               "Your message has been sent! We will get back to you soon :)"}
@@ -170,11 +192,26 @@ export const Contact = () => {
 
               </RightTop>
               <RightBottom>
-                  <div> Hello join us!</div>
-                  <BsInstagram />
-                  <BsDiscord />
+                  <Join>Joining VLA:</Join>
+                
+                    {data.map( (desc) => 
+                     
+                      <Platforms key={desc}>
+                        <GiLotus style={{
+                          margin: "5px 10px 0 20px",
+                          width: "40px",
+                          height: "40px",
+                          color: "#ff83e2",
+                        }}/>
+                        {desc}
+                        </Platforms>
+                    )}
+
+
               </RightBottom>
         </Right>
+        <Footer />
+
       </Container>
 
     </div>
