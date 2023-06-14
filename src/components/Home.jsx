@@ -40,6 +40,7 @@ const Right = styled.div`
 
   @media only screen and (max-width: 769px) {
     flex: 1;
+    display: none;
     align-items: center;
   }
 `;
@@ -75,6 +76,8 @@ const Button = styled.a`
   text-decoration: none;
 `;
 
+
+
 export const Home = () => {
   return (
     <div className="Home-section">
@@ -103,7 +106,7 @@ export const Home = () => {
           <svg
             id="visual"
             className= "greenBackground"
-            viewBox="0 0 900 675" 
+            viewBox="-150 -200 1200 6750"
             version="1.1"
           >
             <g transform="translate(577.0619756043899 328.23943162381295)">

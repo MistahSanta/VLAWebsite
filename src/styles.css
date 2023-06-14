@@ -7,6 +7,8 @@ input, textarea {
 }
 .Container {
     height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overflow-y: auto;
@@ -60,14 +62,20 @@ input, textarea {
    top: 0;
    z-index: 0;
    overflow: visible;
-   aspect-ratio: 1/1.2;
-   height: 90vh;
+   
+   @media (max-width: 850px) {
+      width: 800px;   
+   }
+   
+   width: 900px;
+
 
 }
 
 
 .lotus-section {
    z-index: 1;
+   width:50px;
 }
 
 
@@ -145,3 +153,11 @@ input, textarea {
    }  
  }
 
+
+ .snap-inline {
+   scroll-snap-type: inline mandatory;
+ }
+
+ .snap-inline > * {
+   scroll-snap-align: start;
+ }

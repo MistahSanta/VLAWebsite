@@ -36,6 +36,13 @@ const Container = styled.div`
 
 
   }
+
+  @media (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 const Title = styled.h1`
   font-weight: 200;
@@ -81,6 +88,10 @@ const Right = styled.div`
   flex-direction: column;
   overflow: hidden;
   
+  @media (max-width: 850px) {
+    display:none;
+    
+  }
 `;
 const RightTop = styled.div`
   flex: 1;
@@ -102,6 +113,10 @@ const FormContainer = styled.div`
   box-shadow: rgba(231, 232, 233, 0.12) 0px 2px 4px 0px, rgba(227, 229, 230, 0.32) 0px 2px 16px 0px;
   border-radius: 5%;
   
+  @media (max-width: 850px) {
+      display:flex;
+      justify-self: center;
+  }
   `;
 
 const Header = styled.h1`

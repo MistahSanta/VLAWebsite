@@ -38,7 +38,7 @@ const List = styled.ul`
     gap: 20px;
     list-style: none;
 
-    @media only screen and (max-width: 769px) {
+    @media only screen and (max-width: 590px) {
       display: none;
     }
 `

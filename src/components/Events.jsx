@@ -24,23 +24,42 @@ const Title = styled.h1`
   z-index: 10;
 `;
 const Card = styled.div`
-  width: 100%;
+  width: 90%;
   aspect-ratio: 1/1;
-  display: flex;
+
   flex-direction: column;
-  padding: 2% 2% 0% 2%;
+  
   border: solid white 1px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   
   z-index: 10;
   background-color: black;
+  padding: 15% 15%;
+  @media (max-width: 456px)
+  {
+    padding: 10% 10%;
+    scroll-snap-align: start;
+    overflow: hidden;
+    
+  }
+
+
 `;
 const CardContainer = styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
   gap: 3vw;
-  padding: 0 15%;
+  padding: 0 5%;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 456px)
+  {
+    padding: auto;
+  }
+
+
 `;
 const Link = styled.button`
   background-color: #ff83e2;
@@ -91,6 +110,23 @@ const LearnMore = styled.a`
     color: white;
   }
 `;
+
+const Scroller = styled.div`
+
+  @media (max-width: 456px) {
+    display: grid;
+    
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+    gap: 3rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 80%;
+
+    overflow-x:auto;
+    overscroll-behavior-inline: contain;
+  }
+
+`
 export const Events = () => {
   const data = [
     {
@@ -138,15 +174,16 @@ export const Events = () => {
         <Title>Events</Title>
         <CardContainer>
         <div class="wave-container"></div>
-
-          {data.map((events) => (
-            <Card key={events.name}>
-              <Image src={events.img} />
-              <EventName>{events.name}</EventName>
-              <Desc>{events.desc}</Desc>
-              {/*<LearnMore>Learn More</LearnMore>*/}
-            </Card>
-          ))}
+          <Scroller>
+            {data.map((events) => (
+              <Card key={events.name}>
+                <Image src={events.img} />
+                <EventName>{events.name}</EventName>
+                <Desc>{events.desc}</Desc>
+                {/*<LearnMore>Learn More</LearnMore>*/}
+              </Card>
+            ))}
+          </Scroller>
         </CardContainer>
        {/* <Link>Upcoming Events</Link> */}
       </Container>
