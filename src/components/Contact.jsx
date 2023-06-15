@@ -46,6 +46,7 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
   font-weight: 200;
+  
 `;
 const Form = styled.form`
   width: 400px;
@@ -80,6 +81,10 @@ const Left = styled.div`
   display: flex;
   align-items: start;
   justify-content: flex-end;
+
+  @media (max-width: 456px) {
+    justify-content: center;
+  }
 `;
 const Right = styled.div`
   flex: 1;
@@ -116,6 +121,8 @@ const FormContainer = styled.div`
   @media (max-width: 850px) {
       display:flex;
       justify-self: center;
+      
+      width: 80%;
   }
   `;
 
@@ -128,11 +135,14 @@ const Header = styled.h1`
   align-self: center;
   flex-direction: column;
   font-size: 3rem;
+
+  
 `
 const SubHeader = styled.h2`
   margin-top: 1%;
   font-size: 1.5rem;
   color: lightgray;
+
 `
 
 const Join = styled.h1`

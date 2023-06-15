@@ -23,7 +23,15 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(3,minmax(0, 300px));
   
   width: 100%;
-  height: 85%;
+  height: 90%;
+  
+  @media (max-width: 579px) {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2,minmax(0, 45vw));
+  align-items: center;
+  justify-items: center;
+  
+  }
 `
 
 const Card = styled.div`
@@ -34,6 +42,7 @@ const Card = styled.div`
   display: grid; 
   grid-template-columns: 5fr 1fr;
   grid-template-rows: 5fr 1fr;
+
 
 `
 

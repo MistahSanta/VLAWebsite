@@ -11,17 +11,12 @@ import Lotus from "./Lotus";
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  width: 1400px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   
 
-  @media only screen and (max-width: 769px) {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+
 `;
 const Left = styled.div`
   flex: 2;
@@ -29,32 +24,35 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-
-  @media only screen and (max-width: 769px) {
-    flex: 1;
-  }
+ 
 `;
 const Right = styled.div`
   flex: 3;
   position: relative;
 
-  @media only screen and (max-width: 769px) {
-    flex: 1;
+  @media (max-width: 850px)
+  {
     display: none;
-    align-items: center;
+  }
+  @media (max-width: 1400px) {
+    flex: 2;
   }
 `;
 const Title = styled.h1`
   font-size: 74px;
-  @media only screen and (max-width: 769px) {
+  @media only screen and (max-width: 579px) {
     text-align: center;
   }
 `;
 
 const WhatWeDo = styled.div`
   display: flex;
-  align-items: center;
+
   gap: 10px;
+  @media (max-width: 579px) {
+  justify-content: center;  
+  }
+  
 `;
 const Subtitle = styled.h2`
   color: #ff83e2;
@@ -62,6 +60,10 @@ const Subtitle = styled.h2`
 const Desc = styled.div`
   font-size: 24px;
   color: lightgray;
+  @media (max-width: 579px) {
+    text-align: center;  
+  }
+  
 `;
 const Button = styled.a`
   background-color: #ff83e2;
@@ -74,6 +76,10 @@ const Button = styled.a`
   border: none;
   text-align: center;
   text-decoration: none;
+  @media (max-width: 579px) {
+  margin: 0 auto;  
+  }
+  
 `;
 
 

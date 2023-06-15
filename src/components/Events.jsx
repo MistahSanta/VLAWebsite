@@ -12,6 +12,7 @@ const Container = styled.div`
   justify-content: space-between;
   flex-shrink: 0;
   align-items: center;
+  
 `;
 
 const Title = styled.h1`
@@ -24,22 +25,23 @@ const Title = styled.h1`
   z-index: 10;
 `;
 const Card = styled.div`
-  width: 90%;
+  width: 100%;
   aspect-ratio: 1/1;
-
+  display: flex;
   flex-direction: column;
-  
+
   border: solid white 1px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  
+  padding: 2% 2% 0% 2%;
   z-index: 10;
   background-color: black;
-  padding: 15% 15%;
-  @media (max-width: 456px)
+
+  @media (max-width: 579px)
   {
     padding: 10% 10%;
     scroll-snap-align: start;
     overflow: hidden;
+    height: 70%;
     
   }
 
@@ -49,15 +51,31 @@ const CardContainer = styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
+  width: 70%;
   gap: 3vw;
-  padding: 0 5%;
-  width: 100%;
-  height: 100%;
-
-  @media (max-width: 456px)
+  padding: 0 15%;
+ 
+  @media (max-width: 950px)
   {
-    padding: auto;
+    width: 90%;
+    padding: 0 5%;
   }
+
+  @media (max-width: 579px) {
+    display: grid;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 2rem;
+    gap: 6rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    height: 70vh;
+    overflow-x:auto;
+    overscroll-behavior-inline: contain;
+    width: 70%;
+    padding: 0 13%;
+    
+  }
+
 
 
 `;
@@ -97,6 +115,11 @@ const Image = styled.img`
   align-self: center;
   justify-self: center;
   border-radius: 13%;
+
+  @media (max-width: 579px) {
+    height: 50vw;
+
+  }
 `;
 const LearnMore = styled.a`
   margin: 4% 2%;
@@ -111,22 +134,7 @@ const LearnMore = styled.a`
   }
 `;
 
-const Scroller = styled.div`
 
-  @media (max-width: 456px) {
-    display: grid;
-    
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 1rem;
-    gap: 3rem;
-    grid-auto-flow: column;
-    grid-auto-columns: 80%;
-
-    overflow-x:auto;
-    overscroll-behavior-inline: contain;
-  }
-
-`
 export const Events = () => {
   const data = [
     {
@@ -172,9 +180,10 @@ export const Events = () => {
         </svg>
 
         <Title>Events</Title>
-        <CardContainer>
         <div class="wave-container"></div>
-          <Scroller>
+        <CardContainer>
+      
+          
             {data.map((events) => (
               <Card key={events.name}>
                 <Image src={events.img} />
@@ -183,7 +192,7 @@ export const Events = () => {
                 {/*<LearnMore>Learn More</LearnMore>*/}
               </Card>
             ))}
-          </Scroller>
+       
         </CardContainer>
        {/* <Link>Upcoming Events</Link> */}
       </Container>
