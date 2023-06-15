@@ -2,7 +2,8 @@ import React from "react";
 import "..//styles.css";
 import styled from "styled-components";
 import Social from "../assets/social.png";
-
+import Learning from "..//assets/learn.jpg"
+import Book from "..//assets/Language.jpg"
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -138,19 +139,19 @@ const LearnMore = styled.a`
 export const Events = () => {
   const data = [
     {
-      name: "Vietnamese Language Workshop",
-      img: Social,
-      desc: "A workshop to teach Vietamese! sal;fjhlasdfjh lasjfldsajfl ;ajs;lfj lasd;jflsdajfl jsadl;fj asdl;jflasdjflsadjfl;",
+      name: "Vietnamese Workshop",
+      img: Learning,
+      desc: "A weekly workshop to teach Vietnamese to students of varying difficulty from beginner to advanced",
     },
     {
       name: "Social Hangouts",
       img: Social,
-      desc: "A workshop to teach Vietamese! sal;fjhlasdfjh lasjfldsajfl ;ajs;lfj lasd;jflsdajfl jsadl;fj asdl;jflasdjflsadjfl;",
+      desc: "We host a plethora of social hangouts to create memories and life-long friendships",
     },
     {
       name: "Vietnamese Book Reading",
-      img: Social,
-      desc: "A workshop to teach Vietamese! sal;fjhlasdfjh lasjfldsajfl ;ajs;lfj lasd;jflsdajfl jsadl;fj asdl;jflasdjflsadjfl;",
+      img: Book,
+      desc: "A weekly book club that gather and read and decipher popular and well-written Vietnamese books",
     },
   ];
 
