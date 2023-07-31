@@ -120,7 +120,7 @@ input, textarea {
    white-space: nowrap;
 
    @media (max-width: 579px) {
-      font-size: 1.4rem;
+      font-size: 20px;
    }
    
 }
@@ -135,7 +135,7 @@ input, textarea {
    color: var(--green);
   
       @media (max-width: 579px) {
-      font-size: 1.4rem;
+      font-size: 20px;;
    }
 }
 
