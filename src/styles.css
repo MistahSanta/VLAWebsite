@@ -68,7 +68,11 @@ input, textarea {
      top:0;
      left: 0%;
    }
-   
+   @media ( max-width: 1399px)
+   {
+      top: 0;
+      left: -4vw;
+   }
    
 
 
@@ -114,6 +118,11 @@ input, textarea {
    margin: auto;
    color: var(--pink);
    white-space: nowrap;
+
+   @media (max-width: 579px) {
+      font-size: 1.4rem;
+   }
+   
 }
 .card-position {
    width: 100%;
@@ -125,6 +134,9 @@ input, textarea {
    text-align: center;
    color: var(--green);
   
+      @media (max-width: 579px) {
+      font-size: 1.4rem;
+   }
 }
 
 

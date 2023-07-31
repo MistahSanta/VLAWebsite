@@ -76,25 +76,8 @@ const CardContainer = styled.div`
     padding: 0 13%;
     
   }
-
-
-
 `;
-const Link = styled.button`
-  background-color: #ff83e2;
-  display: flex;
-  margin: 1% auto;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 500;
-  width: 200px;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  margin-top: 5%;
-`;
+
 const EventName = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
@@ -110,7 +93,7 @@ const Desc = styled.div`
 `;
 const Image = styled.img`
   width: 100%;
-  height: 80%;
+  height: 100%;
   object-fit: cover;
   overflow: hidden;
   align-self: center;
@@ -122,18 +105,7 @@ const Image = styled.img`
 
   }
 `;
-const LearnMore = styled.a`
-  margin: 4% 2%;
-  text-decoration: underline;
-  color: gray;
-  font-size: 1rem;
-  width: max-content;
-  cursor: pointer;
 
-  &:hover {
-    color: white;
-  }
-`;
 
 
 export const Events = () => {
@@ -149,7 +121,7 @@ export const Events = () => {
       desc: "We host a plethora of social hangouts to create memories and life-long friendships",
     },
     {
-      name: "Vietnamese Book Reading",
+      name: "Vietnamese Book Club",
       img: Book,
       desc: "A weekly book club that gather and read and decipher popular and well-written Vietnamese books",
     },
@@ -158,19 +130,7 @@ export const Events = () => {
   return (
     <div className="Events-section" id="event">
       <Container>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          opacity="1"
-          viewBox="0 336.6 2400 526.8"
-          style={{
-            position: "absolute",
-            top: "10%",
-            left: "0",
-            overflow: "hidden",
-            zIndex: 0,
-          }}
-        >
+
           <g fill="#80ff80" transform="matrix(1,0,0,1,0,11.397918701171875)">
             <path
               d="M 0 273.204200502693 Q 600 450 600 321.52268052485056 Q 1200 450 1200 383.0752357763102 Q 1800 450 1800 316.96800793362104 Q 2400 450 2400 350.4799806965252 L 2400 800 L 0 800 L 0 274.4915433660245 Z"
@@ -178,7 +138,7 @@ export const Events = () => {
               opacity="NaN"
             ></path>
           </g>
-        </svg>
+        
 
         <Title>Events</Title>
         <div class="wave-container"></div>

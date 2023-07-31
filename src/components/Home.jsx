@@ -24,7 +24,10 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
- 
+  @media (max-width: 1399px)
+  {
+    flex: 2;
+  }
 `;
 const Right = styled.div`
   flex: 3;
@@ -34,6 +37,10 @@ const Right = styled.div`
   {
     display: none;
   }
+  @media (max-width: 1399px)
+  {
+    flex: 1;
+  }
   @media (max-width: 1400px) {
     flex: 2;
   }
@@ -42,6 +49,7 @@ const Title = styled.h1`
   font-size: 74px;
   @media only screen and (max-width: 579px) {
     text-align: center;
+    font-size: 15vw;
   }
 `;
 
@@ -49,19 +57,26 @@ const WhatWeDo = styled.div`
   display: flex;
 
   gap: 10px;
+
   @media (max-width: 579px) {
-  justify-content: center;  
+    justify-content: center;  
   }
   
 `;
 const Subtitle = styled.h2`
   color: #ff83e2;
+
+  @media only screen and (max-width: 579px) {
+    text-align: center;
+    font-size: 5vw;
+  }
 `;
 const Desc = styled.div`
   font-size: 24px;
   color: lightgray;
   @media (max-width: 579px) {
     text-align: center;  
+    font-size: 4vw;
   }
   
 `;
@@ -100,7 +115,7 @@ export const Home = () => {
           <Button href="#event">Learn More</Button>
         </Left>
         <Right>
-          <Canvas className="lotus-section"  camera={{fov: 55, position:[3,2,3]}}>
+          <Canvas className="lotus-section"  camera={{fov: 55, position:[4,2,3]}}>
 
             <ambientLight color="#F81894" intensity={0.5} />
             <directionalLight position={[1, 2, 1]} intensity={0.5} />

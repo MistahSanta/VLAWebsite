@@ -27,7 +27,7 @@ const GridContainer = styled.div`
   
   @media (max-width: 579px) {
   grid-template-rows: repeat(3, minmax(0, 1fr));
-  grid-template-columns: repeat(2,minmax(0, 45vw));
+  grid-template-columns: repeat(2,minmax(0, 40vw));
   align-items: center;
   justify-items: center;
   

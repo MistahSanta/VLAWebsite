@@ -4,6 +4,7 @@ import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import {GiLotus} from "react-icons/gi"
 import Footer from "./Footer";
+
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -47,6 +48,9 @@ const Container = styled.div`
 const Title = styled.h1`
   font-weight: 200;
   
+  @media (max-width: 579px) {
+    text-align: center;
+  }
 `;
 const Form = styled.form`
   width: 400px;
@@ -60,12 +64,22 @@ const Input = styled.input`
   background-color: #e8e6e6;
   border: none;
   border-radius: 5px;
+
+  @media (max-width: 579px)
+  {
+    padding: 10px;
+  }
 `;
 const TextArea = styled.textarea`
   padding: 20px;
   border: none;
   border-radius: 5px;
   background-color: #e8e6e6;
+
+  @media (max-width: 579px)
+  {
+    padding: 10px;
+  }
 `;
 const Button = styled.button`
   background-color: #da4ea2;
@@ -75,6 +89,7 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
   padding: 20px;
+
 `;
 const Left = styled.div`
   flex: 1;
@@ -82,7 +97,7 @@ const Left = styled.div`
   align-items: start;
   justify-content: flex-end;
 
-  @media (max-width: 456px) {
+  @media (max-width: 579px) {
     justify-content: center;
   }
 `;
@@ -118,11 +133,20 @@ const FormContainer = styled.div`
   box-shadow: rgba(231, 232, 233, 0.12) 0px 2px 4px 0px, rgba(227, 229, 230, 0.32) 0px 2px 16px 0px;
   border-radius: 5%;
   
-  @media (max-width: 850px) {
+  @media (max-width: 760px) {
       display:flex;
       justify-self: center;
       
       width: 80%;
+  }
+
+  @media (max-width: 579px)
+  {
+    display:flex;
+      justify-self: center;
+      
+      width: 70vw;
+      height: 55dvh;
   }
   `;
 
@@ -136,6 +160,10 @@ const Header = styled.h1`
   flex-direction: column;
   font-size: 3rem;
 
+  @media ( max-width: 579px)
+  {
+    margin-top: 10%;
+  }
   
 `
 const SubHeader = styled.h2`
@@ -143,6 +171,10 @@ const SubHeader = styled.h2`
   font-size: 1.5rem;
   color: lightgray;
 
+  @media (max-width: 579px) {
+    margin-top: 5%;
+    font-size: 5vw;
+  }
 `
 
 const Join = styled.h1`
