@@ -50,11 +50,11 @@ const Card = styled.div`
 export const Team = () => {
   const data = [
     { name: "Angela", image: Angela, role: "President", class: "item1"},
-    { name: "Thien Nguyen", image: Thien, role: "Social Chair", class: "item2"},
-    { name: "Tri Nguyen", image: Tri, role: "Vice President", class: "item5"},
-    { name: "Jack Le", image: Jack, role: "Marketing Chair", class: "item3"},
-    { name: "Justin Tran", image: Justin, role: "Treasurer", class: "item4"},
-    { name: "Jonathan Le", image: John, role: "Developer", class: "item6"},
+    { name: "Thien", image: Thien, role: "Social Chair", class: "item2"},
+    { name: "Tri", image: Tri, role: "Vice President", class: "item5"},
+    { name: "Jack", image: Jack, role: "Marketing Chair", class: "item3"},
+    { name: "Justin ", image: Justin, role: "Treasurer", class: "item4"},
+    { name: "Jonathan", image: John, role: "Developer", class: "item6"},
   ]
 
   
