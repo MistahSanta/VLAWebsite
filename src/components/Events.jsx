@@ -3,7 +3,7 @@ import "..//styles.css";
 import styled from "styled-components";
 import Social from "../assets/social.png";
 import Learning from "..//assets/learn.jpg"
-import Book from "..//assets/Language.jpg"
+import Cook from "..//assets/cookout.jpg"
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -121,9 +121,9 @@ export const Events = () => {
       desc: "We host a plethora of social hangouts to create memories and life-long friendships",
     },
     {
-      name: "Vietnamese Book Club",
-      img: Book,
-      desc: "A weekly book club that gather and read and decipher popular and well-written Vietnamese books",
+      name: "Vietnamese Cookout",
+      img: Cook,
+      desc: "An event where we gather (try) cook popular Vietnamese food together!",
     },
   ];
 

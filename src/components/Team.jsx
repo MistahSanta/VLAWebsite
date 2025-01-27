@@ -2,7 +2,9 @@ import React from 'react'
 import "..//styles.css";
 import styled from "styled-components";
 import John from "..//assets/officers/john.jpg"
-import Angela from "..//assets/officers/angela.jpg"
+//import Angela from "..//assets/officers/angela.jpg"
+import Jordan from "..//assets/officers/jordan.jpg"
+import Andrew from "../assets/officers/andrew.jpg"
 import Justin from "..//assets/officers/justin.jpg"
 import Jack from  "..//assets/officers/jack.jpg"
 import Tri from "..//assets/officers/tri.jpg";
@@ -49,12 +51,12 @@ const Card = styled.div`
 
 export const Team = () => {
   const data = [
-    { name: "Angela", image: Angela, role: "President", class: "item1"},
+    { name: "Jonathan", image: John, role: "President", class: "item1"},
     { name: "Thien", image: Thien, role: "Social Chair", class: "item2"},
     { name: "Tri", image: Tri, role: "Vice President", class: "item5"},
-    { name: "Jack", image: Jack, role: "Marketing Chair", class: "item3"},
-    { name: "Justin ", image: Justin, role: "Treasurer", class: "item4"},
-    { name: "Jonathan", image: John, role: "Developer", class: "item6"},
+    { name: "Justin", image: Justin, role: "Marketing Chair", class: "item3"},
+    { name: "Jordan", image: Jordan, role: "Treasurer", class: "item4"},
+    { name: "Andrew", image: Andrew, role: "Engagement Officer", class: "item6"},
   ]
 
   
